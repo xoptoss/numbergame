@@ -1,0 +1,31 @@
+package mainPackage;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Random random = new Random();
+
+		int answer,number;
+		answer=	random.nextInt(9)+1;
+		System.out.println("Im thinking of a number between 1-10, Can you guess it?");	
+		Scanner tKeyboard = new Scanner(System.in);
+		number=tKeyboard.nextInt();
+		if(number==answer)
+		{
+			System.out.println("Good Job!");
+		}
+		else
+		{
+			if(number>answer)		
+				System.out.println("your guess is to high..");			
+			
+			else			
+				System.out.println("Your guess is to low..");				
+		}
+	}
+}
+
